@@ -42,7 +42,7 @@ fi
 sudo adduser asifmahsud sudo
 
 # Set password of user to 'root'
-echo 'user:root' | sudo chpasswd
+echo 'asifmahsud:root' | sudo chpasswd
 
 # Change default shell from sh to bash
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
@@ -144,7 +144,7 @@ printf "\n$g$b    Installation Completed $endc$enda\n\n" >&2
 
 
 # Adding user to CRP group
-sudo adduser user chrome-remote-desktop
+sudo adduser asifmahsud chrome-remote-desktop
 
 # Finishing Work
 printf '\nVisit http://remotedesktop.google.com/headless and Copy the command after authentication\n'
