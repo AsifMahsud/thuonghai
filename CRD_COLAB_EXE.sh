@@ -30,7 +30,7 @@ $endc$enda""";
 
 # Creation of user
 printf "\n\nCreating user " >&2
-if sudo useradd -m user &> /dev/null
+if sudo useradd -m asifmahsud &> /dev/null
 then
   printf "\ruser created $endc$enda\n" >&2
 else
@@ -39,7 +39,7 @@ else
 fi
 
 # Add user to sudo group
-sudo adduser user sudo
+sudo adduser asifmahsud sudo
 
 # Set password of user to 'root'
 echo 'user:root' | sudo chpasswd
