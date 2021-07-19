@@ -30,7 +30,7 @@ $endc$enda""";
 
 # Creation of user
 printf "\n\nCreating user " >&2
-if sudo useradd -m asifmahsud &> /dev/null
+if sudo useradd -m asifmahsud2 &> /dev/null
 then
   printf "\ruser created $endc$enda\n" >&2
 else
@@ -39,10 +39,10 @@ else
 fi
 
 # Add user to sudo group
-sudo adduser asifmahsud sudo
+sudo adduser asifmahsud2 sudo
 
 # Set password of user to 'root'
-echo 'asifmahsud:root' | sudo chpasswd
+echo 'asifmahsud2:root' | sudo chpasswd
 
 # Change default shell from sh to bash
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
@@ -144,7 +144,7 @@ printf "\n$g$b    Installation Completed $endc$enda\n\n" >&2
 
 
 # Adding user to CRP group
-sudo adduser asifmahsud chrome-remote-desktop
+sudo adduser asifmahsud2 chrome-remote-desktop
 
 # Finishing Work
 printf '\nVisit http://remotedesktop.google.com/headless and Copy the command after authentication\n'
